@@ -66,12 +66,13 @@ class OrderDateSum(MRJob):
     
     def sort(self, key, values):
         data = []
-        for order_date, order_count in values:
-            data.append((order_date, order_count))
+        for order_date, order_total in values:
+            data.append((order_date, order_total))
             data.sort()
 
-        for order_date, order_count in data:
-            yield order_date, order_count
+        for order_date, order_total in data:
+            yield order_date, order_total
 
 if __name__ == '__main__':
-    OrderDateCount.run()
+    # OrderDateCount.run()
+    OrderDateSum.run()
