@@ -1,9 +1,21 @@
 {
     "postgresql":{
-        "host":"localhost",
-        "db":"digitalskola",
+        "host":"172.23.230.5",
+        "db":"postgres",
         "user":"postgres",
-        "pwd":"postgres",
+        "pwd":"admin",
         "port":5432
+    },
+    
+    "warehouse":{
+        "host":"172.23.230.5",
+        "db":"dwh_digitalskola",
+        "user":"postgres",
+        "pwd":"admin",
+        "port":5432
+    },
+
+    "hadoop":{
+        "client":"http://localhost:9870"
     }
 }
